@@ -31,7 +31,7 @@
       </div>
 
       <div class="showcase-text">
-        <h1>Scribe</h1>
+        <h1 id="scribe-heading">Scribe</h1>
         <h2>An elegant application to get your thoughts & tasks down on digital parchment.</h2>
       </div>
     </div>
@@ -40,20 +40,27 @@
 
   <!-- Register / Login Section -->
   <section>
-    <h3>Sign In</h3>
-    <!-- Sign Up Form -->
-    <form action="#">
-      <!-- Unsername Field -->
-      <input type="text" name="userName" placeholder="Username">
-      <!-- Email Fields -->
-      <input type="email" name="email" placeholder="Email">
-      <input type="email" name="email" placeholder="Confirm Email">
-      <!-- Password Fields -->
-      <input type="password" name="reg_password" placeholder="Password" required>
-      <input type="password" name="reg_password2" placeholder="Confirm Password" required>
-      <!-- Submit Button -->
-      <input class="button-primary"type="submit" name="register_button" value="Register">
-    </form>
+    <div class="register">
+      <h3>Create Account</h3>
+      <!-- Sign Up Form -->
+      <form id="signup-form" action="#">
+        <!-- Unsername Field -->
+        <input type="text" name="userName" placeholder="Username">
+        <br>
+        <!-- Email Fields -->
+        <input type="email" name="email" placeholder="Email">
+        <br>
+        <input type="email" name="email" placeholder="Confirm Email">
+        <br>
+        <!-- Password Fields -->
+        <input type="password" name="reg_password" placeholder="Password" required>
+        <br>
+        <input type="password" name="reg_password2" placeholder="Confirm Password" required>
+        <br>
+        <!-- Submit Button -->
+        <input id="submit-btn" class="button-primary"type="submit" name="register_button" value="Register">
+      </form>
+    </div>
     <!-- END Sign Up -->
   </section>
   <!-- END Register Section -->

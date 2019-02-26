@@ -1,0 +1,30 @@
+// Showcase Section //
+section {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.showcase {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  margin-bottom: 5rem;
+}
+
+img {
+  width: 400px;
+  min-width: 500px;
+  height: 250px;
+}
+
+#scribe-heading {
+  font-family: 'snell roundhand', sans-serif;
+  font-size: 10rem;
+}
+
+h2 {
+  font-family: 'Avenir', sans-serif;
+  font-size: 2.5rem;
+}
