@@ -1,0 +1,16 @@
+// Responsive //
+
+@media (max-width: 900px) {
+  .showcase {
+    margin-bottom: 2rem;
+  }
+  
+  .showcase-text {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .showcase-img {
+    display: none;
+  }
+}
