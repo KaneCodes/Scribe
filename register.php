@@ -40,28 +40,15 @@ if (isset($_POST['register_button'])) {
   $email2 = str_replace(' ', '', $email2); // Remove spaces
   $email2 = ucfirst(strtolower($email2)); // Uppercase first letter
 
-  // Password
+  // Passwords
   $password = strip_tags($_POST['reg_password']); // Remove HTML tags
-  $password = str_replace(' ', '', $password); // Remove spaces
-  $password = ucfirst(strtolower($password)); // Uppercase first letter
-
-  // Password confirm
   $password2 = strip_tags($_POST['reg_password2']); // Remove HTML tags
-  $password2 = str_replace(' ', '', $password2); // Remove spaces
-  $password2 = ucfirst(strtolower($password2)); // Uppercase first letter
+
+  $date = date("Y-m-d"); // Current date
 
 
 
 }
-
-
-
-
-
-
-
-
-
 
 ?>
 
