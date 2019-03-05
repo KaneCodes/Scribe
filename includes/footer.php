@@ -4,7 +4,7 @@
     <p>&copy; Scribe 2019</p>
   </div>
 </footer>
-<!-- END Fotter -->
+<!-- END Fotter
 
 <!-- Scripts -->
 
