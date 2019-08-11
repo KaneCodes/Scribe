@@ -67,7 +67,7 @@ if (isset($_POST['register_button'])) {
 
 <!-- Login Form -->
 <section>
-  <div class="login">
+  <div id="login-form" class="login">
     <form action="register.php" method="POST">
 
       <input type="text" name="login_aname" required>
@@ -84,7 +84,7 @@ if (isset($_POST['register_button'])) {
 
 <!-- Register Form -->
 <section>
-  <div class="register hide">
+  <div id="register-form" class="register hide">
     <h2>Create Account</h2>
 
     <!-- Sign Up Form -->
