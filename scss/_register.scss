@@ -1,5 +1,5 @@
 // Register & Login //
-.register {
+.register, .login {
   width: 100%;
   height: 100%;
   display: flex;
@@ -13,6 +13,14 @@ h3 {
   font-family: 'Avenir', sans-serif;
 }
 
-#register-btn {
+#register-btn,  {
   margin-left: 12rem;
+}
+
+#login-btn, #create-btn {
+  width: 190px;
+}
+
+.hide {
+  display: none;
 }

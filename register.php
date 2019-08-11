@@ -1,4 +1,5 @@
 <?php
+
 // Database Connection
 $connection = mysqli_connect("127.0.0.1", "root", "Storm12345", "scribe");
 // Check connection
@@ -48,9 +49,7 @@ if (isset($_POST['register_button'])) {
   $date = date("Y-m-d"); // Current date
 }
 
-
 ?>
-
 
 <?php include "includes/header.php"; ?>
 
@@ -66,9 +65,26 @@ if (isset($_POST['register_button'])) {
 </section>
 <!-- END Showcase -->
 
-<!-- Register / Login Section -->
+<!-- Login Form -->
 <section>
-  <div class="register">
+  <div class="login">
+    <form action="register.php" method="POST">
+
+      <input type="text" name="login_aname" required>
+      <br>
+      <input type="password" name="login_passowrd" required>
+      <br>
+      <input id="login-btn" class="button-primary" type="submit" name="login_button" value="Login">
+      <br>
+      <input id="create-btn" type="button" value="Create Account">
+    </form>
+
+  </div>
+</section>
+
+<!-- Register Form -->
+<section>
+  <div class="register hide">
     <h2>Create Account</h2>
 
     <!-- Sign Up Form -->
@@ -93,8 +109,8 @@ if (isset($_POST['register_button'])) {
     </form>
     <!-- END Login -->
 
-
   </div>
+
   <!-- END Sign Up -->
 </section>
 <!-- END Register Section -->

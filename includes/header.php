@@ -19,10 +19,6 @@
   <!-- Header -->
   <header>
     <img id="logo-img" src="assets/img/scribe.png" alt="Scribe logo of a black feather">
-    <ul id="login-nav">
-      <li><a href="#">Register</a></li>
-      <li>|</li>
-      <li><a href="#">Login</a></li>
-    </ul>
+  
   </header>
   <!-- END Header -->
