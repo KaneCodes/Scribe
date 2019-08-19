@@ -97,6 +97,26 @@ if (isset($_POST['register_button'])) {
   if(strlen($password > 30 || strlen($password) < 5 )) {
     array_push($error_array, "Your password must be between 5 and 30 characters<br>");
   }
+  // Check if the error array is empty
+  if(empty($error_array)) {
+		$password = md5($password); //Encrypt password before sending to database
+
+		//Generate username by concatenating first name and last name
+		$username = strtolower($fname . "_" . $lname);
+		$check_username_query = mysqli_query($connection, "SELECT username FROM users WHERE username='$username'");
+
+
+		$i = 0;
+		//if username exists add number to username
+		while(mysqli_num_rows($check_username_query) != 0) {
+			$i++; //Add 1 to i
+			$username = $username . "_" . $i;
+			$check_username_query = mysqli_query($connection, "SELECT username FROM users WHERE username='$username'");
+		}
+
+    // Insert details into database
+    $query = mysqli_query($connection, "INSERT INTO users VALUES ('$i', '$email', '$fname', '$lname', '$password', '$username')");
+  }
 
 }
 ?>
@@ -143,9 +163,7 @@ if (isset($_POST['register_button'])) {
       <input type="text" name="reg_fname" placeholder="First Name" value="<?php
       if(isset($_SESSION['reg_fname'])) {
         echo $_SESSION['reg_fname'];
-
       }
-
       ?>"required>
 
       <?php if(in_array("Your first name must be between 2 and 25 characters<br>", $error_array)) echo "Your first name must be between 2 and 25 characters<br>"; ?>
@@ -168,7 +186,7 @@ if (isset($_POST['register_button'])) {
 
       <!-- Password -->
       <input type="password" name="reg_password" placeholder="Password" required>
-      
+
       <!-- Password Confirm -->
       <input type="password" name="reg_password2" placeholder="Confirm Password" required>
       <br>
